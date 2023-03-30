@@ -4,13 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/reset.css">
+    <link rel="stylesheet" href="./Assets/style.css">
     <title>Coding Quiz</title>
 </head>
 <body>
-    
-    <div>
-        
-    </div>
+
+    <!-- Header which includes 'View Highscore' button on the left and Countdown Timer on the right -->
+    <header id="header">
+        <a href="#" id="viewHighscore">View Highscores</a>
+        <p id="countdownTimer">Time: 30</p>
+    </header>
+
+    <!-- Section which displays the title, instructions & start button of the quiz -->
+    <section id="instructionsPage">
+        <h1>Coding Quiz Challenge</h1>
+        <p>
+            Try to answer the following code-related questions within the time
+            limit. Keep in mind that incorrect answers will penalize your score/time
+            by ten seconds!
+        </p>
+        <button id="startButton">Start Quiz</button>
+    </section>
+
+    <!-- Div created for the area where the questions and choices will be shown -->
+    <div id="quizArea"></div>
+
+    <!-- Section to enter initials after quiz is completed -->
+    <section id="userInitials">
+        <h2>Completed Quiz</h2>
+        <p id="showEndScore">Your score:</p>
+        <p id="enterInitials">Enter your initials</p>
+        <form>
+            <input type="text"><br>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Section to show Highscores -->
+    <section id="showHighscores">
+        <h2>Your Highscores</h2>
+        <ul id="highscoreList"></ul>
+    </section>
+
+    <script src="./Develop/script.js"></script>
 
 </body>
 </html>
