@@ -45,6 +45,10 @@ h2 {
     width: 65%;
 }
 
+[data-state="hidden"] {
+    display: none !important;
+}
+
 #quizArea {
     display: flex;
     flex-wrap: wrap;
