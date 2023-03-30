@@ -1,0 +1,64 @@
+:root {
+    --pageBackground: #220061;
+    --textColor: #FFFFFF;
+    --buttonColor: #1DA700;
+    --buttonText: #000;
+}
+
+* {
+    box-sizing: border-box;
+    background-color: var(--pageBackground);
+    font-size: 22px;
+    color: var(--textColor);
+    line-height: 2rem;
+    padding: 15px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    margin: auto;
+    font-size: 2.5rem;
+}
+
+h2 {
+    margin: auto;
+    font-size: 2rem;
+}
+
+
+#instructionsPage {
+    flex-direction: column;
+    align-items: center;
+}
+
+#instructionsPage p {
+    width: 68%;
+}
+
+#quizArea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    background-color: var(--buttonColor);
+    color: var(--buttonText);
+    font-size: 1.1rem;
+    margin: 8px;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: var(--buttonText);
+    color: var(--buttonColor);
+}
