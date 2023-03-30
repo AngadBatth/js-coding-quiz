@@ -36,12 +36,13 @@ h2 {
 
 
 #instructionsPage {
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 #instructionsPage p {
-    width: 68%;
+    width: 65%;
 }
 
 #quizArea {
@@ -61,4 +62,24 @@ button {
 button:hover {
     background-color: var(--buttonText);
     color: var(--buttonColor);
+}
+
+#userInitials {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#userInitials p {
+    width: 100%;
+}
+
+input {
+    height: 50px;
+}
+
+#showHighscores {
+    display: flex;
+    flex-direction: column;
 }
