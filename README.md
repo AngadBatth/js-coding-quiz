@@ -17,9 +17,9 @@ While working on this project I learned how to use click events and create funct
 <br />
 
 ## Website
-[The link to the deployed webpage can be found here](./Assets/images/websiteSnippet.png)
+[The link to the deployed webpage can be found here](https://angadbatth.github.io/js-coding-quiz/)
 
-![Sample of Website](angadbatth.github.io/js-coding-quiz/)
+![Sample of Website](./Assets/images/websiteSnippet.png)
 <br />
 
 ## Credits
