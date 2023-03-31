@@ -11,13 +11,13 @@
 <body>
 
     <!-- Header which includes 'View Highscore' button on the left and Countdown Timer on the right -->
-    <header id="header">
+    <header id="header" data-state="shown">
         <a href="#" id="viewHighscore">View Highscores</a>
         <p id="countdownTimer">Time: 30</p>
     </header>
 
     <!-- Section which displays the title, instructions & start button of the quiz -->
-    <section id="instructionsPage">
+    <section id="instructionsPage" data-state="shown">
         <h1>Coding Quiz Challenge</h1>
         <p>
             Try to answer the following code-related questions within the time
@@ -37,7 +37,7 @@
         <p id="enterInitials">Enter your initials</p>
         <form>
             <input type="text"><br>
-            <button type="submit">Submit</button>
+            <button id="submit">Submit</button>
         </form>
     </section>
 

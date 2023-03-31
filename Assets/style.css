@@ -34,7 +34,6 @@ h2 {
     font-size: 2rem;
 }
 
-
 #instructionsPage {
     display: flex;
     flex-direction: column;
@@ -43,6 +42,10 @@ h2 {
 
 #instructionsPage p {
     width: 65%;
+}
+
+[data-state="shown"] {
+    display: flex !important;
 }
 
 [data-state="hidden"] {

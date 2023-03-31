@@ -1,3 +1,16 @@
+var score = 0;
+var remainingTime = 30;
+var questionIndex = 0;
+var header = document.querySelector("#header");
+var countdownTimer = document.querySelector("#countdownTimer");
+var instructionsPage = document.querySelector("#instructionsPage");
+var startButton = document.querySelector("#startButton");
+var quizArea = document.querySelector("#quizArea");
+var userInitials = document.querySelector("#userInitials");
+var submitBtn = document.querySelector("#submit");
+var showHighscores = document.querySelector("#showHighscores");
+var highscoreList = document.querySelector("#highscoreList");
+
 var questionsList = [
     {
       question: "Inside which HTML element do we put the JavaScript?",
@@ -25,5 +38,3 @@ var questionsList = [
       answer: "onclick",
     },
   ];
-
-  
