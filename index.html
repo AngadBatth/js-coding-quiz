@@ -11,13 +11,16 @@
 <body>
 
     <!-- Header which includes 'View Highscore' button on the left and Countdown Timer on the right -->
-    <header id="header" data-state="shown">
+    <header id="header">
         <a href="#" id="viewHighscore">View Highscores</a>
         <p id="countdownTimer">Time: 30</p>
     </header>
 
+    <!-- Div created for the area where the questions and choices will be shown -->
+    <div id="quizSection">
+
     <!-- Section which displays the title, instructions & start button of the quiz -->
-    <section id="instructionsPage" data-state="shown">
+    <section id="instructionsPage">
         <h1>Coding Quiz Challenge</h1>
         <p>
             Try to answer the following code-related questions within the time
@@ -27,11 +30,16 @@
         <button id="startButton">Start Quiz</button>
     </section>
 
-    <!-- Div created for the area where the questions and choices will be shown -->
-    <div id="quizArea" data-state="hidden"></div>
+    <!-- Section where we will append data to show Questions + Choices to user -->
+    <section id="appendQuiz">
+        <div>
+            <h3 id="showQuestion"></h3>
+            <ul id="showChoices"></ul>
+        </div>
+    </section>
 
     <!-- Section to enter initials after quiz is completed -->
-    <section id="userInitials" data-state="hidden">
+    <section id="userInitials">
         <h2>Completed Quiz</h2>
         <p id="showEndScore">Your score:</p>
         <p id="enterInitials">Enter your initials</p>
@@ -42,10 +50,11 @@
     </section>
 
     <!-- Section to show Highscores -->
-    <section id="showHighscores" data-state="hidden">
+    <section id="showHighscores">
         <h2>Your Highscores</h2>
         <ul id="highscoreList"></ul>
     </section>
+    </div>
 
     <script src="./Develop/script.js"></script>
 

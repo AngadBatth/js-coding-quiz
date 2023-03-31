@@ -1,15 +1,22 @@
 var score = 0;
 var remainingTime = 30;
 var questionIndex = 0;
+var userResponse;
 var header = document.querySelector("#header");
 var countdownTimer = document.querySelector("#countdownTimer");
 var instructionsPage = document.querySelector("#instructionsPage");
+var appendQuiz = document.querySelector("#appendQuiz");
+var showQuestion = document.querySelector("#showQuestion");
+var showChoices = document.querySelector("#showChoices");
 var startButton = document.querySelector("#startButton");
-var quizArea = document.querySelector("#quizArea");
+var quizSection = document.querySelector("#quizSection");
 var userInitials = document.querySelector("#userInitials");
+var showEndScore = document.querySelector("#showEndScore");
+var enterInitials = document.querySelector("#enterInitials");
 var submitBtn = document.querySelector("#submit");
 var showHighscores = document.querySelector("#showHighscores");
 var highscoreList = document.querySelector("#highscoreList");
+var createButton = document.createElement("button");
 
 var questionsList = [
     {
@@ -38,3 +45,66 @@ var questionsList = [
       answer: "onclick",
     },
   ];
+
+  function createQuiz() {
+    userResponse = questionsList[questionIndex].options;
+    for (i = 0; i < userResponse.length; i++) {
+        var userReturn = userResponse[i];
+        createButton.textContent = userReturn;
+        createButton.addEventListener("click", function(event) {
+            isCorrect(event.target.innerText);
+        });
+        showChoices.appendChild(createButton);
+    }
+  }
+
+  function appendQuestions() {
+    if (questionIndex == 5) {
+        return;
+    }
+
+    instructionsPage.style.display = "none";
+    appendQuiz.style.display = "flex";
+    showQuestion.innerHTML = questionsList[questionIndex].question;
+    createQuiz();
+  }
+
+  function isCorrect(userChoice) {
+    let answerIndex = questionsList[questionIndex].answer;
+    let correctAnswer = questionsList[questionIndex].options[answerIndex];
+
+    if (userChoice == correctAnswer) {
+        score++;
+    } else {
+        remainingTime -= 5;
+    }
+    showQuestion.textContent = "";
+    showChoices.textContent = "";
+    questionIndex++;
+    appendQuestions();
+  }
+
+  function terminateProcess() {
+    alert("Your score is: " + score);
+    appendQuiz.style.display = "none";
+    userInitials.style.display = "flex";
+    showEndScore.textContent = "Your score is: " + score;
+  }
+
+  function decreaseTimer() {
+    timer = setInterval(() => {
+        remainingTime -= 1;
+        countdownTimer.innerHTML = remainingTime;
+        if (remainingTime <= 0 || questionIndex == 5) {
+            clearInterval(timer);
+            terminateProcess();
+        }
+    }, 1000)
+  }
+
+  function beginPlaying() {
+    decreaseTimer();
+    appendQuestions();
+  }
+
+  startButton.addEventListener("click", beginPlaying);

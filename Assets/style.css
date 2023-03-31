@@ -44,15 +44,7 @@ h2 {
     width: 65%;
 }
 
-[data-state="shown"] {
-    display: flex !important;
-}
-
-[data-state="hidden"] {
-    display: none !important;
-}
-
-#quizArea {
+#quizSection {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -71,8 +63,13 @@ button:hover {
     color: var(--buttonColor);
 }
 
+#appendQuiz {
+    display: none;
+    align-items: center;
+}
+
 #userInitials {
-    display: flex;
+    display: none;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
@@ -87,6 +84,6 @@ input {
 }
 
 #showHighscores {
-    display: flex;
+    display: none;
     flex-direction: column;
 }
