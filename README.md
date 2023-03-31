@@ -8,17 +8,18 @@
 <br />
 
 ## Description
-This is an interactive coding quiz created using JavaScript, HTML and CSS.
+This is an interactive coding quiz created using JavaScript, HTML and CSS. It features 5 multiple-choice questions and logs your score. At the end you have the option to put in your initials and also view the highscores.
 <br />
 
 ## What was learned?
+While working on this project I learned how to use click events and create functions to edit the html for the user in live time. I also learned how to effectively use queryselectors and how to traverse the DOM.
 
 <br />
 
 ## Website
-[The link to the deployed webpage can be found here]()
+[The link to the deployed webpage can be found here](./Assets/images/websiteSnippet.png)
 
-![Sample of Website]()
+![Sample of Website](angadbatth.github.io/js-coding-quiz/)
 <br />
 
 ## Credits
