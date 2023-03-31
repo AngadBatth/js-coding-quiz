@@ -1,3 +1,4 @@
+// Globally declared Variables to be used within functions
 var score = 0;
 var remainingTime = 30;
 var questionIndex = 0;
@@ -18,6 +19,7 @@ var showHighscores = document.querySelector("#showHighscores");
 var highscoreList = document.querySelector("#highscoreList");
 var createButton = document.createElement("button");
 
+// Object with all 5 Questions and respective answers
 var questionsList = [
     {
       question: "Inside which HTML element do we put the JavaScript?",
@@ -46,6 +48,9 @@ var questionsList = [
     },
   ];
 
+//   Takes the current questionIndex and loops through the questionsList object,
+//   If working correctly, this should create a button and append it to the screen
+//   for each answer option.
   function createQuiz() {
     userResponse = questionsList[questionIndex].options;
     for (i = 0; i < userResponse.length; i++) {
@@ -58,6 +63,7 @@ var questionsList = [
     }
   }
 
+//   Makes the landing page dissappear and displays the questions based on current index.
   function appendQuestions() {
     if (questionIndex == 5) {
         return;
@@ -69,6 +75,8 @@ var questionsList = [
     createQuiz();
   }
 
+//   Checks if the users choice is correct by seeing if it is equal to the correct answer.
+//  function then replaces the text content with blank string to replace with the next question.
   function isCorrect(userChoice) {
     let answerIndex = questionsList[questionIndex].answer;
     let correctAnswer = questionsList[questionIndex].options[answerIndex];
@@ -84,6 +92,7 @@ var questionsList = [
     appendQuestions();
   }
 
+//   Tells user their score and moves onto entering initials screen
   function terminateProcess() {
     alert("Your score is: " + score);
     appendQuiz.style.display = "none";
@@ -91,6 +100,7 @@ var questionsList = [
     showEndScore.textContent = "Your score is: " + score;
   }
 
+//   Keeps timer decreasing by 1second and ends at 0
   function decreaseTimer() {
     timer = setInterval(() => {
         remainingTime -= 1;
@@ -102,9 +112,11 @@ var questionsList = [
     }, 1000)
   }
 
+//   Function to actually begin the game by calling the decreaseTimer and appendQuestions functions
   function beginPlaying() {
     decreaseTimer();
     appendQuestions();
   }
 
+//   Event listener on the start button to call the beginPlaying function
   startButton.addEventListener("click", beginPlaying);
